@@ -1,0 +1,15 @@
+{
+  "name": "myclassroom-mern",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MY CLASSROOM rebuilt on the MERN stack (MongoDB, Express, React, Node)",
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently -n api,web -c blue,magenta \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
